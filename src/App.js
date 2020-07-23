@@ -21,6 +21,7 @@ export default class App extends React.Component {
   render() {
     const value = {
       makeChoice: this.makeChoice,
+      userChoice: this.state.userChoice,
     };
 
     return (
