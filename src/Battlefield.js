@@ -10,6 +10,12 @@ export default class Battlefield extends React.Component {
     whoWon: "",
   };
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.letTheHouseChoose();
+    }, 1000);
+  }
+
   letTheHouseChoose = () => {
     let house = Math.floor(Math.random() * 3);
 
@@ -42,12 +48,14 @@ export default class Battlefield extends React.Component {
         this.setState({
           whoWon: "You win",
         });
+        this.context.updateScore();
       }
     } else if (this.context.userChoice === "paper") {
       if (house === "rock") {
         this.setState({
           whoWon: "You win",
         });
+        this.context.updateScore();
       } else if (house === "paper") {
         this.setState({
           whoWon: "A tie...",
@@ -66,6 +74,7 @@ export default class Battlefield extends React.Component {
         this.setState({
           whoWon: "You win",
         });
+        this.context.updateScore();
       } else if (house === "scissors") {
         this.setState({
           whoWon: "A tie...",
@@ -78,14 +87,12 @@ export default class Battlefield extends React.Component {
     return (
       <div className="Battlefield">
         <div className="user-choice">You picked: {this.context.userChoice}</div>
-        <button type="button" onClick={this.letTheHouseChoose}>
-          House choice
-        </button>
         <div className="house-choice">
           The house picked: {this.state.houseChoice}
         </div>
         <div className="whoWon">{this.state.whoWon}</div>
         <div className="play-again">
+          <div>Your score: {this.context.score}</div>
           <Link to={"/choices"}>Play again</Link>
         </div>
       </div>

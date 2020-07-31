@@ -10,6 +10,7 @@ export default class App extends React.Component {
 
   state = {
     userChoice: "",
+    score: 0,
   };
 
   makeChoice = (choice) => {
@@ -18,10 +19,18 @@ export default class App extends React.Component {
     });
   };
 
+  updateScore = () => {
+    this.setState({
+      score: this.state.score + 1,
+    });
+  };
+
   render() {
     const value = {
       makeChoice: this.makeChoice,
       userChoice: this.state.userChoice,
+      updateScore: this.updateScore,
+      score: this.state.score,
     };
 
     return (
