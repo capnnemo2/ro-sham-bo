@@ -4,6 +4,7 @@ import Rules from "./Rules";
 import Choices from "./Choices";
 import Battlefield from "./Battlefield";
 import Context from "./Context";
+import "./App.css";
 
 export default class App extends React.Component {
   static contextType = Context;

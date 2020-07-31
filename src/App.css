@@ -1,0 +1,92 @@
+body {
+  text-align: center;
+  background: radial-gradient(
+    circle at 50%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  color: white;
+}
+
+header {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.play {
+  margin: 25px;
+}
+
+a:hover {
+  color: tomato;
+}
+
+.btn-link {
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 55px;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+}
+
+/* BEGIN RULES */
+
+.rules-card {
+  background-color: white;
+  padding: 25px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* END RULES */
+
+/* BEGIN CHOICES */
+
+.hand {
+  background: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid;
+  margin: 10px auto;
+  position: relative;
+}
+
+.hand svg {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+}
+
+.rock {
+  border-color: hsl(349, 71%, 52%);
+}
+
+.paper {
+  border-color: hsl(230, 89%, 62%);
+}
+
+.scissors {
+  border-color: hsl(39, 89%, 49%);
+}
+
+/* END CHOICES */
+
+/* BEGIN BATTLEFIELD */
+
+.whoWon {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100px;
+  margin: 0 auto 45px auto;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* END BATTLEFIELD */

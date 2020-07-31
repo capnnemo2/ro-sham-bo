@@ -20,7 +20,7 @@ export default class Choices extends React.Component {
   render() {
     return (
       <div className="Choices">
-        <div className="rock">
+        <div className="hand rock">
           <Link to={"/battlefield"} onClick={this.chooseRock}>
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
               <path
@@ -31,7 +31,7 @@ export default class Choices extends React.Component {
           </Link>
         </div>
 
-        <div className="paper">
+        <div className="hand paper">
           <Link to={"/battlefield"} onClick={this.choosePaper}>
             <svg xmlns="http://www.w3.org/2000/svg" width="49" height="59">
               <path
@@ -42,7 +42,7 @@ export default class Choices extends React.Component {
           </Link>
         </div>
 
-        <div className="scissors">
+        <div className="hand scissors">
           <Link to={"/battlefield"} onClick={this.chooseScissors}>
             <svg xmlns="http://www.w3.org/2000/svg" width="51" height="58">
               <path
@@ -53,7 +53,7 @@ export default class Choices extends React.Component {
           </Link>
         </div>
 
-        <div>
+        <div className="btn-link">
           <Link to={"/"}>Rules</Link>
         </div>
       </div>

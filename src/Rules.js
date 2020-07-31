@@ -5,19 +5,6 @@ export default class Rules extends React.Component {
   render() {
     return (
       <div className="Rules">
-        <div className="x-close">
-          <Link to={"/choices"}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-              <path
-                fill="#3B4262"
-                fillRule="evenodd"
-                d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
-                opacity=".25"
-              />
-            </svg>
-          </Link>
-        </div>
-
         <div className="rules-card">
           <svg xmlns="http://www.w3.org/2000/svg" width="304" height="270">
             <defs>
@@ -172,6 +159,10 @@ export default class Rules extends React.Component {
               </g>
             </g>
           </svg>
+        </div>
+
+        <div className="play btn-link">
+          <Link to={"/choices"}>Play!</Link>
         </div>
       </div>
     );
