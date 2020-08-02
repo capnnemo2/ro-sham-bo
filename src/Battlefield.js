@@ -159,12 +159,16 @@ export default class Battlefield extends React.Component {
   render() {
     return (
       <div className="Battlefield">
-        <div className="user-choice">
-          You picked: {this.displayUserChoice()}
+        <div className="container results">
+          <div className="user-choice">
+            You picked: {this.displayUserChoice()}
+          </div>
+
+          <div className="house-choice">
+            The house picked: {this.displayHouseChoice()}
+          </div>
         </div>
-        <div className="house-choice">
-          The house picked: {this.displayHouseChoice()}
-        </div>
+
         <div className="whoWon">
           <p>{this.state.whoWon}</p>
           <p>Score: {this.context.score}</p>

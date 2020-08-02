@@ -49,10 +49,17 @@ a:hover {
 
 /* BEGIN CHOICES */
 
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .hand {
   background: white;
-  width: 150px;
-  height: 150px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   border: 15px solid;
   margin: 10px auto;
@@ -61,9 +68,37 @@ a:hover {
 
 .hand svg {
   position: absolute;
-  top: 48px;
-  left: 48px;
+  top: 42px;
+  left: 40px;
 }
+
+.rock-choice {
+  border-color: hsl(349, 71%, 52%);
+  position: absolute;
+  top: -70px;
+  left: -34px;
+}
+
+.paper-choice {
+  border-color: hsl(230, 89%, 62%);
+  position: absolute;
+  top: -70px;
+  right: -34px;
+}
+
+.scissors-choice {
+  border-color: hsl(39, 89%, 49%);
+  position: absolute;
+  top: 112px;
+  left: 60px;
+}
+
+.footer {
+}
+
+/* END CHOICES */
+
+/* BEGIN BATTLEFIELD */
 
 .rock {
   border-color: hsl(349, 71%, 52%);
@@ -77,11 +112,9 @@ a:hover {
   border-color: hsl(39, 89%, 49%);
 }
 
-/* END CHOICES */
-
-/* BEGIN BATTLEFIELD */
-
 .whoWon {
+  text-transform: uppercase;
+  font-weight: bolder;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100px;
   margin: 0 auto 45px auto;
@@ -90,3 +123,15 @@ a:hover {
 }
 
 /* END BATTLEFIELD */
+
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    width: 80%;
+    margin: 40px auto 40px auto;
+  }
+
+  .results {
+    justify-content: space-around;
+  }
+}
